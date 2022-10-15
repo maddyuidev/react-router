@@ -1,20 +1,13 @@
-import logo from "./logo.svg";
-import "./App.css";
-import CakeContainer from "./components/CakeContainer";
-import CakeContainerHooks from "./components/CakeContainerHooks";
-import IceCreamContainerHooks from "./components/IceCreamContainerHook";
-import Shop from "./components/shop";
-import FormikContainer from "./components/forms/FormikContainer";
+import { Routes, Route } from "react-router-dom";
+import { About } from "./components/about";
+import { Home } from "./components/home";
 
 function App() {
   return (
-    <div>
-      <FormikContainer />
-      <CakeContainer />
-      <CakeContainerHooks />
-      <IceCreamContainerHooks />
-      <Shop />
-    </div>
+    <Routes>
+      <Route path="about" element={<About />}></Route>
+      <Route path="/" element={<Home />}></Route>
+    </Routes>
   );
 }
 
